@@ -1,0 +1,162 @@
+body {
+  background-color: #0b0b10;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.Header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: #141419;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #d90429;
+  box-shadow: 0 10px 30px rgba(217, 4, 41, 0.3);
+}
+
+.CalcDisplay {
+  background-color: #050508;
+  color: #ff2a4b;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #800f2f;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.CalcGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.CalcButton,
+.ClearButton,
+.SurnameButton {
+  width: 100%;
+  min-height: 60px;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Number Buttons */
+.CalcButton {
+  background-color: #21212b;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #0f0f14;
+}
+
+.CalcButton:hover {
+  background-color: #323240;
+  color: #ff2a4b;
+}
+
+.CalcButton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0f0f14;
+}
+
+/* Operator Buttons: ÷, *, -, + */
+.CalcGrid .CalcButton:nth-child(4),
+.CalcGrid .CalcButton:nth-child(8),
+.CalcGrid .CalcButton:nth-child(12),
+.CalcGrid .CalcButton:nth-child(16) {
+  background-color: #d90429;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #800f2f;
+}
+
+.CalcGrid .CalcButton:nth-child(4):hover,
+.CalcGrid .CalcButton:nth-child(8):hover,
+.CalcGrid .CalcButton:nth-child(12):hover,
+.CalcGrid .CalcButton:nth-child(16):hover {
+  background-color: #ff1e43;
+}
+
+.CalcGrid .CalcButton:nth-child(4):active,
+.CalcGrid .CalcButton:nth-child(8):active,
+.CalcGrid .CalcButton:nth-child(12):active,
+.CalcGrid .CalcButton:nth-child(16):active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #800f2f;
+}
+
+/* Equal Button */
+.CalcGrid .CalcButton:nth-child(15) {
+  background-color: #800f2f;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #4a081a;
+}
+
+.CalcGrid .CalcButton:nth-child(15):hover {
+  background-color: #a4133c;
+}
+
+.CalcGrid .CalcButton:nth-child(15):active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #4a081a;
+}
+
+/* Clear Button */
+.ClearButton {
+  background-color: #590d22;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #2b0610;
+}
+
+.ClearButton:hover {
+  background-color: #800f2f;
+}
+
+.ClearButton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #2b0610;
+}
+
+/* Surname Button */
+.SurnameButton {
+  grid-column: 1 / -1;
+  background-color: #d90429;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #800f2f;
+}
+
+.SurnameButton:hover {
+  background-color: #ff1e43;
+}
+
+.SurnameButton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #800f2f;
+}
